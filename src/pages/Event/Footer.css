@@ -1,0 +1,72 @@
+.Footer{
+    background-color: black;
+    color: #a0a0a0;
+    font-family: 'Poppins';
+    font-size: 15px;
+    justify-content: center;
+    /* height: 50px; */
+    /* background-color: #131313; */
+    display: flex;
+    width: 100%;
+    margin: 0px -30px -60px;
+    padding: 80px 85.09px 50px 86px;
+    .col{
+        text-align: center;
+    }
+    .FooterHeader{
+        display: flex;
+        justify-content: center;
+    }
+    .socilclass{
+        /* text-align: center; */
+        justify-content: center;
+        display: flex;
+        gap: 0.5rem;
+        
+        .circle{
+            color: #131313;
+            background: #f7f7f7;
+            font-size: 18px;
+            margin-right: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            height: 2em;
+            width: 2em;
+            text-align: center;
+            line-height: 2em;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        
+    }
+    .copy{
+        text-align: center;
+    }
+}
+@media (max-width: 360px){
+    .Footer{
+        width: 100%;
+    }
+}
+@media (min-width: 361px) and (max-width: 641px){
+    .Footer{
+        width: 100%;
+    }
+}
+@media (min-width: 642px) and (max-width: 1024px){
+    .Footer{
+        width: 100%;
+    }
+}
+@media (min-width: 1025px){
+    .Footer{
+        width: 100%;
+    }
+}
+.pt-5{
+    text-align: left;
+}
+.pt-2 {
+    text-align: right;
+}

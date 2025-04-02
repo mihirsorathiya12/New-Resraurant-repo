@@ -1,0 +1,236 @@
+/* 🖋️ Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
+
+/* 🌟 Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    
+    flex-direction: column;
+   
+    width: 100%;
+    height: 100vh;
+
+}
+
+/* 🎭 Dark Overlay Effect */
+.overlay {
+    font-family: 'Dancing Script', cursive;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    position: absolute;
+   
+}
+
+/* 🎨 Logo Styles */
+.logo2,.logo3 {
+    width: 100px;
+    height: 100px;
+}
+
+.logo4 {
+    width: 20%;
+    color: #c5ab6b;
+}
+
+/* 🏆 Heading Styles */
+h1.even great-vibes {
+    font-family: 'Great Vibes', cursive;
+    font-size: 66px;
+    color: #c5ab6b;
+}
+
+/* ✨ Special Font for Even Headings */
+h1.even {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🌟 General Text Styles */
+span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 69px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: #c5ab6b;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* 🍽️ Restaurant Name */
+.restaurant-name {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+
+/* ✨ Welcome Text (Cursive) */
+.welcome-text {
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: #c5ab6b; /* Golden Color */
+}
+
+/* 🏆 Seasonal Offers Button */
+.seasonal-offers {
+    background-color: #c5ab6b;
+    color: white;
+    padding: 17px 35px 16px;
+    font: 18px Poppins;
+    border: 2px solid #c5ab6b;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.seasonal-offers:hover {
+    background-color: #ffffff;
+    color: black;
+    border-color: black;
+}
+
+/* 🔥 Default Font Override */
+* {
+    font-family: Arial, sans-serif;
+}
+.discover {
+    display: flex;
+    align-items: center;
+    padding: 4rem 10%;
+    gap: 3rem;
+    flex-wrap: wrap;
+    background: #ffffff;
+
+}
+.dis {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  flex: 1;
+  max-width: 50%;
+}
+.about1 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px;
+   
+}
+.about2 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px;
+    grid-row: 2;
+    margin-top: -216px;
+}   
+.hist {
+    flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+.h1dis {
+    font: 40px"Great Vibes";
+  color: #c5ab6b;
+  font-style: italic;
+  margin: 0px 0px 10px;
+  /* padding: 0px 30px 30px; */
+}
+.dark {
+    color: #303030;
+    font: 35px Poppins;
+    margin: 0px 0px 20px;
+   
+}
+.read {
+   
+    background-color: #c5ab6b;
+    color: white;
+    padding: 17px 35px;
+    font-size: 18px;
+    border: 2px solid #c5ab6b;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    
+}
+.read:hover {
+    background-color: #c5ab4b;
+    color: #ffffff;
+    
+}
+
+.pa {
+    color: #878787;
+    font: 14px"Open Sans",Helvetica,Arial,Verdana;
+    margin: 0px 0px 10px;
+}
+
+.dish {
+    width: 500px;  
+  height: auto;  
+  object-fit: contain; 
+  display: block;   
+  margin: 0 auto; 
+  margin: 0px 40px;
+  padding: 50px 30px;
+}
+
+.checkout {
+    background: rgb(244, 244, 244);
+    /* display: flex; */
+    /* align-items: center; */
+    padding: 3rem 5%;
+    /* gap: 3rem; */
+    /* flex-wrap: wrap; */
+ 
+}
+.outi {
+    /* padding: 50px; */
+    text-align: center;
+     font: 60px"Great Vibes";
+      color: #c5ab6b;
+      font-style: italic;
+      margin: 0px 0px 5px;
+}
+.offer {
+    text-align: center;
+    margin: 15px;
+    color: #303030;
+    font: 50px Poppins;
+}
+
+.hh11 {
+    text-align: center;
+    font: 60px "Great Vibes";
+    margin: 0px 0px 5px;
+    color: #c5ab6b;
+}

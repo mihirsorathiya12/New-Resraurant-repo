@@ -1,0 +1,28 @@
+.bookt {
+    background-color: #c5ab6b;
+    color: white;
+    padding: 12px 20px 11px;
+    margin: 0px 0px 10px;
+    font-size: 14px ;
+    border: 2px solid #c5ab6b;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+}
+.bookt:hover {
+    background-color: #c5ab4b;
+    color: #ffffff;
+    
+}
+.hists {
+    color: #303030;
+    font: 35px Poppins;
+}
+.dec {
+    color:#303030;
+    font: 16px Poppins;
+    margin: 18px 0px 20px;
+}

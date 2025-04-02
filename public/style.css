@@ -1,0 +1,141 @@
+/* Global Styles for Images */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .logo {
+    display: block;
+    width: 20%;
+  }
+  
+  .nav {
+    width: 60%;
+    justify-content: end;
+  }
+ /* .circle{ */
+  /* background: #c5ab6b; */
+  /* border-radius: 50%; */
+  /* size: 2rem; */
+ /* } */
+  .outer {
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    /* background-color: transparent; */
+    background-repeat: no-repeat;
+    position: relative;  /* Ensures content stays above the background */
+  }
+  
+  /* Hero Section Style */
+  .hero-section {
+    background-image: url('assets/background.jpg');
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font: 14px "Open Sans", Helvetica,Arial,Verdana;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure it takes full viewport height */
+    position: relative;
+    z-index: 1;
+     /* Places it below the navbar */
+  }
+  
+  /* Header Text Style */
+  h1 {
+    display: flex;
+    color: #c5ab6b;
+    font: 50px "Grete vibes";
+  }
+  
+  /* Flexbox for main content */
+  .main-box {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  /* Make sure the navbar stays fixed on top */
+  header {
+    position: fixed; /* Makes the navbar stick to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure navbar is always above the rest of the content */
+    padding: 10px 5%;
+    background-color: transparent; /* Transparent background */
+  }
+  
+  /* Optional: Add padding to the body/content to avoid overlap with navbar */
+  body {
+    padding-top: 0; /* Adjust based on the height of your navbar */
+  }
+  p.para {
+    color: #878787;
+    font: 14px "Open Sans", Helvetica,Arial;
+    margin: 0px 0px 10px;
+  }
+  .par {
+    color: #878787;
+    font: 14px "Open Sans", Helvetica,Arial;
+    text-align: left;
+   
+  }
+  .our {
+    font-family: 'Great Vibes', cursive;
+    
+  }
+  .img1 {
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+    border-radius: 0;
+    transition: opacity .38s;
+  }
+  .imgg {
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+  }
+.aboutback {
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+.homi {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    
+    &:hover {
+        color: #c5ab6b;
+        text-decoration: underline;
+    }
+}
+
+.dis { 
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-family: 'Great Vibes', cursive;
+}
+.hist {
+    font: 35px Poppins;
+    margin: 0px 0px 20px;
+  color: #303030;
+  font-style: italic;
+  display: block;
+}
+.pc {
+    font: 14px "Open Sans",Helvetica,Arial,Verdana;
+    display: flex;
+    color: #878787;
+    text-align: center;
+    /* max-width: 30%; */
+    margin: 0 auto; 
+}
