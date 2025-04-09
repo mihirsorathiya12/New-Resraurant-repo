@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./Event.css"; // CSS file import
 import styled from "styled-components";
 import Footer from "./Footer"; // './Footer' kyunki dono files ek hi folder mein hain
+import { Link } from "react-router-dom";
 
-const EventSection = styled.div`
-  height: 50vh;
-  width: 100%;
+const EventSections = styled.div`
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,6 @@ const EventSection = styled.div`
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
   content: "";
 `;
 
@@ -103,7 +102,7 @@ const TextContainer = styled.div`
 `;
 
 const HistoryText = styled.p`
-  font-size: 1rem;
+  // font-size: 1rem;
   color: #666;
   line-height: 1.6;
   position: relative;
@@ -143,7 +142,7 @@ const BtextContainer = styled.div`
 `;
 
 const HistoryTextb = styled.p`
-  font-size: 1rem;
+  // font-size: 1rem;
   color: #666;
   line-height: 1.6;
   position: relative;
@@ -225,7 +224,7 @@ const TextContainerm = styled.div`
 `;
 
 const HistoryTextm = styled.p`
-  font-size: 1rem;
+  // font-size: 1rem;
   color: #666;
   line-height: 1.6;
   position: relative;
@@ -235,6 +234,7 @@ const HistoryTextm = styled.p`
 const ReservationSection = styled.div`
   background-image: url("img/res.jpg");
   background-size: cover;
+
   background-repeat: no-repeat;
   position: relative;
   display: flex;
@@ -328,18 +328,18 @@ const Event = () => {
 
   return (
     <EventContainer>
-      <EventSection className="eventback">
+      <EventSections className="eventback">
         <Overbay />
         <EventContant>
           <EventTitle>Event</EventTitle>
           <Breadcrumd>
-            <a itemprop="item" href="http://localhost:3000/" title="Home">
-              <span className="homi">Home</span>
-            </a>
-            / Event
+            <Link to="/" className="homi">
+              Home
+            </Link>
+            &nbsp;/&nbsp; Event
           </Breadcrumd>
         </EventContant>
-      </EventSection>
+      </EventSections>
 
       <HistorySections>
         <ImagesContainer>
@@ -355,8 +355,8 @@ const Event = () => {
             In volutpat vehicula iaculis. Nullam dapibus velit vel suscipit
             malesuada. Morbi tincidunt, dui tristique tincidunt faucibus, purus
             sapien consectetur libero, vitae venenatis eros lacus vitae erat.
-            Mauris tristique pretium tristique. Integer at nulla at eros
-            suscipit suscipit vitae nec diam. dictum sed metus nec mollis.
+            Mauris at eros suscipit suscipit vitae nec diam. dictum sed metus
+            nec mollis.
             <button
               className="bookt"
               onClick={() =>
@@ -380,9 +380,8 @@ const Event = () => {
           </SectionTitlesb>
           <HistoryTextb>
             Mauris elementum ex sed pretium varius. Phasellus vitae nibh rutrum,
-            luctus felis maximus, sagittis neque. Quisque accumsan velit ipsum,
-            a egestas enim volutpat at. Integer dictum ante odio, vitae
-            convallis nunc cursus eu. Aenean finibus imperdiet ex, eu hendrerit
+            luctus felis maximus, Quisque accumsan velit ipsum, a egestas enim
+            volutpat at. Integer dictum ante odio, vitae convallis eu hendrerit
             quam vehicula ac. Sed vel erat eu libero eleifend fringilla.
             <button
               className="bookt"

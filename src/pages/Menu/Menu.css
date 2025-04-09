@@ -1,0 +1,28 @@
+
+
+.outi {
+    /* padding: 50px; */
+    text-align: center;
+     font: 60px"Great Vibes";
+      color: #c5ab6b;
+      font-style: italic;
+      margin: 0px 0px 5px;
+}
+
+.offer {
+    text-align: center;
+    margin: 15px;
+    color: #303030;
+    font: 50px Poppins;
+}
+.dish {
+ 
+  width: 559px;  
+  height: auto;  
+  object-fit: contain; 
+  display: block;   
+  margin: 0 auto; 
+  margin: 0px 40px;
+  margin-left: 80px;
+  padding: 50px 30px;
+}

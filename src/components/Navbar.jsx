@@ -1,7 +1,7 @@
-// src/components/Navbar.js
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+
 import {
   FaInstagram,
   FaFacebookF,
@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 const NavbarContainer = styled.nav`
-  background-color: tranprent;
+  background-color: transparent;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -19,73 +19,76 @@ const NavbarContainer = styled.nav`
 
 const NavLinks = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  margin-top: 5px;
   
 `;
 
-const NavLink = styled(Link)`
-  color: white;
+// NavLink with active and hover styles
+const StyledNavLink = styled(NavLink)`
+  color: #ffffff;
+    font-weight: bold;
   text-decoration: none;
-  font-size: 1.2rem;
+ font: 14px "Poppins", Helvetica, Arial, Verdana, sans-serif;
+  text-transform: uppercase;
+  padding: 4px 5px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+
+  &.active {
+   
+    text-decoration: underline;
+    color: #C5ab6b;
+  }
+
   &:hover {
     color: #c5ab6b;
     text-decoration: underline;
   }
-    
 `;
-
 
 const SocialIcons = styled.div`
   display: flex;
-  gap: 1rem;
+  margin-right: 180px;
+  margin-left: 30px;
+  gap: 0.3rem;
+  margin-top: 5px;
 `;
-
 
 const Navbar = () => {
   return (
     <div className="outer">
-    <NavbarContainer>
-    <div className="logo"><img src="img/logo1.webp" alt="" /></div>
-      <NavLinks className="nav">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-        <NavLink to="/menu">Menu</NavLink>
-        <NavLink to="/event">Event</NavLink>
-        <NavLink to="/news">News</NavLink>
-      </NavLinks>
+      <NavbarContainer>
+        <div className="logo">
+          <img src="img/logo1.webp" alt="Logo" />
+        </div>
 
-      <SocialIcons>
-        <a
-          href="https://www.instagram.com"
-         className="circle"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram color="#c5ab6b" size="1.5rem" />
-        </a>
-        <a
-          href="https://www.facebook.com"
-          target="_blank"
-          className="circle"
-          rel="noopener noreferrer"
-        >
-          <FaFacebookF color="#c5ab6b" size="1.5rem" />
-        </a>
-        <a
-          href="https://www.pinterest.com"
-          target="_blank"
-          className="circle"
-          rel="noopener noreferrer"
-        >
-          <FaPinterestP color="#c5ab6b" size="1.5rem" />
-        </a>
-        <a href="https://x.com" target="_blank"  className="circle" rel="noopener noreferrer">
-          <FaTimes color="#c5ab6b" size="1.5rem" />
-        </a>
-      </SocialIcons>
-    </NavbarContainer>
-    
+        <NavLinks className="nav">
+          <StyledNavLink to="/" end>HOME</StyledNavLink>
+          <StyledNavLink to="/about">ABOUT US</StyledNavLink>
+          <StyledNavLink to="/menu">MENU</StyledNavLink>
+          <StyledNavLink to="/event">EVENTS</StyledNavLink>
+          <StyledNavLink to="/news">NEWS</StyledNavLink>
+          <StyledNavLink to="/contact">CONTACT</StyledNavLink>
+        </NavLinks>
+
+        <SocialIcons>
+          
+          <a href="https://www.facebook.com" className="circle" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF color="#ffffff" size="1rem" />
+          </a>
+         
+          <a href="https://x.com" className="circle" target="_blank" rel="noopener noreferrer">
+            <FaTimes color="#ffffff" size="1rem" />
+          </a>
+          <a href="https://www.pinterest.com" className="circle" target="_blank" rel="noopener noreferrer">
+            <FaPinterestP color="#ffffff" size="1rem" />
+          </a>
+          <a href="https://www.instagram.com" className="circle" target="_blank" rel="noopener noreferrer">
+            <FaInstagram color="#ffffff" size="1rem" />
+          </a>
+        </SocialIcons>
+      </NavbarContainer>
     </div>
   );
 };

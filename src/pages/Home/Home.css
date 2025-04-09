@@ -31,9 +31,16 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 20px;
     position: absolute;
+    margin-top: 70px;
    
 }
-
+.even {
+    color: #c5ab6b;
+}
+.evens {
+    margin-top: 10px;
+    color: #c5ab6b;
+}
 /* 🎨 Logo Styles */
 .logo2,.logo3 {
     width: 100px;
@@ -195,12 +202,13 @@ p {
 }
 
 .dish {
-    width: 500px;  
+    width: 599px;  
   height: auto;  
   object-fit: contain; 
   display: block;   
   margin: 0 auto; 
   margin: 0px 40px;
+  margin-left: 80px;
   padding: 50px 30px;
 }
 
@@ -233,4 +241,8 @@ p {
     font: 60px "Great Vibes";
     margin: 0px 0px 5px;
     color: #c5ab6b;
+}
+.hmon {
+    color: #ffffff;
+    font: 14px Roboto;
 }

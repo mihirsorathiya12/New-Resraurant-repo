@@ -10,10 +10,11 @@ import {
   FaClock,
   FaParking,
 } from "react-icons/fa";
-import Footer from "./Footer"; 
+import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const EventSection = styled.div`
-  height: 50vh;
+  height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,8 +25,6 @@ const EventSection = styled.div`
   background: url("assets/background.jpg");
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
   content: "";
 `;
 
@@ -58,7 +57,7 @@ const Breadcrumd = styled.p`
 `;
 const Section = styled.div`
   padding: 50px 0;
-  background: #f8f8f8;
+  // background: #f8f8f8;
 `;
 
 const Title = styled.h2`
@@ -70,7 +69,7 @@ const Title = styled.h2`
 
 const MapContainer = styled.div`
   width: 100%;
-  height: 300px;
+  height: 400px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -90,10 +89,10 @@ const ContactSection = () => {
         <EventContant>
           <EventTitle>Contact</EventTitle>
           <Breadcrumd>
-            <a itemprop="item" href="http://localhost:3000/" title="Home">
-              <span className="homi">Home</span>
-            </a>
-            / Contact
+            <Link to="/" className="homi">
+              Home
+            </Link>
+            &nbsp;/&nbsp; Contact
           </Breadcrumd>
         </EventContant>
       </EventSection>
@@ -154,16 +153,19 @@ const ContactSection = () => {
           <Row>
             {/* Directions Section */}
             <Col md={6}>
-              <Title>Directions</Title>
               <MapContainer>
+                <Title>Directions</Title>
                 <iframe
+                  title="Google Fonts"
                   width="100%"
                   height="100%"
                   frameBorder="0"
                   style={{ border: 0 }}
-                  src={`https://www.google.com/maps/embed/v1/place?key=YOUR_REAL_API_KEY&q=London`}
+                  src="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Work+Sans:wght@400;600;700&display=swap"
                   allowFullScreen
                 ></iframe>
+
+                <br></br>
               </MapContainer>
               <p
                 style={{
@@ -178,8 +180,8 @@ const ContactSection = () => {
 
             {/* Contact Form Section */}
             <Col md={6}>
-              <Title>Get in Touch!</Title>
               <ContactForm>
+                <Title>Get in Touch!</Title>
                 <Form>
                   <Form.Group controlId="name">
                     <Form.Control type="text" placeholder="Name *" required />
@@ -205,9 +207,7 @@ const ContactSection = () => {
                     />
                   </Form.Group>
 
-                  <Button variant="warning" className="mt-3 w-100">
-                    Send Message
-                  </Button>
+                  <Button className="bookt">Send Message</Button>
                 </Form>
               </ContactForm>
             </Col>

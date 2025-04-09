@@ -82,7 +82,7 @@ class Footer extends React.Component {
               </Col>
             </Row>
           </Container>
-          <Container className="pb-5 pt-4">
+          <Container className="pb-5 pt-5">
             <Row>
               <Col md={{ span: 12 }} className="copy">
                 2016 Seven Restaurant. All Rights Reserved.

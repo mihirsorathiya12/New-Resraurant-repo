@@ -10,14 +10,14 @@ import Event from "./pages/Event/Event";
 import News from "./pages/News/News";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
-
+import StickyHeader from "./components/StickyHeader"; // ✅ correct
 
 const App = () => {
   return (
     <Router>
       <Routes></Routes>
       <Navbar />
+      <StickyHeader />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
