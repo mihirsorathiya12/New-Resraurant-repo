@@ -152,25 +152,29 @@ const TeamHeader = styled.div`
 `;
 
 const GoldText = styled.h2`
-  font: 40px "Great Vibes";
+  font-size: 60px;
+  line-height: 65px;
+  font-family: "Great Vibes";
+  --font-weight: theme;
   color: #c5ab6b;
-  margin: 0px 0px 5px;
+  margin-bottom: 5px;
 `;
 
 const TeamTitle = styled.h1`
-  font: 50px Poppins;
+  font-size: 50px;
+  line-height: 55px;
+  font-family: "Poppins";
+  font-weight: normal;
   color: #303030;
-  display: flex;
   justify-content: center;
-  margin-top: -10px;
 `;
 
 const TeamContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  // align-items: stretch;
-  gap: 2rem;
+  margin: 50px;
+  gap: 4rem;
   flex-wrap: wrap;
   margin: 0px 20px 0 px 0px;
   padding: 0px 15px;
@@ -180,6 +184,7 @@ const TeamContainer = styled.div`
 const TeamImage = styled.img`
   width: 30%;
   border-radius: 0px;
+  margin-left: -200px;
 `;
 
 const TeamText = styled.div`
@@ -220,12 +225,14 @@ const TeamCard = styled.div`
   text-align: left;
   position: relative;
   width: 100%;
+  height: 700px;
   overflow: hidden;
+  // margin-left: -200px;
 `;
 
 const TeamImagess = styled.img`
   width: 100%;
-  height: 250px;
+  height: 400px;
   object-fit: cover;
   border-radius: 0px;
 
@@ -233,8 +240,13 @@ const TeamImagess = styled.img`
 `;
 
 const ChefNamess = styled.h3`
-  font: 24px Poppins;
-  color: #303030;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Poppins";
+  --font-weight: theme;
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
   justify-content: left;
   padding: 0px 40px;
 `;
@@ -248,19 +260,21 @@ const ChefTitless = styled.p`
 
 const SocialIcons = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  margin-left: 16px;
   gap: 5px;
-  margin-top: 10px;
+  margin-top: -4px;
   padding: 20px;
 `;
 
 const SocialIcon = styled.a`
   color: #c5ab6b;
   font-size: 20px;
-  text-decoration: none; width: 40px;
+  text-decoration: none;
+  width: 40px;
   height: 40px;
   border-radius: 50%;
- 
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,11 +282,31 @@ const SocialIcon = styled.a`
   font-size: 18px;
   text-decoration: none;
   transition: 0.3s;
-
-  &:hover {
-    background: #ffffff;
+  .circles {
+    width: 30px;
+    height: 30px;
+    background-color: #c5ab6b; /* Background color for circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* This makes it a circle */
+    transition: background-color 0.3s ease;
+  }
 `;
-
+const Separators = styled.div`
+  height: 1px;
+  background: #878787;
+  width: 70px;
+  margin: 5px auto;
+`;
+const Separatorss = styled.div`
+  height: 1px;
+  background: #878787;
+  width: 90px;
+  margin: 5px auto;
+  margin-top: -3px;
+  margin-bottom: 50px;
+`;
 const About = () => {
   return (
     <AboutContainer>
@@ -349,6 +383,8 @@ const About = () => {
         <TeamHeader>
           <GoldText>Meet our</GoldText>
           <TeamTitle>TEAM</TeamTitle>
+          <Separators />
+          <Separatorss />
         </TeamHeader>
 
         <TeamContainer>
@@ -399,29 +435,31 @@ const About = () => {
               <a
                 href="https://www.facebook.com"
                 target="_blank"
+                className="circles"
                 rel="noopener noreferrer"
               >
-                <FaFacebookF color="#c5ab6b" size="1.5rem" />
+                <FaFacebookF color="#ffffff" size="1.2rem" />
               </a>
             </SocialIcon>
             <SocialIcon>
               <a
                 href="https://www.twitter.com"
                 target="_blank"
+                className="circles"
                 rel="noopener noreferrer"
               >
-                <FaTwitter color="#c5ab6b" size="1.5rem" />
+                <FaTwitter color="#ffffff" size="1.2rem" />
               </a>
             </SocialIcon>
             <SocialIcon>
               {" "}
               <a
                 href="https://www.instagram.com"
-                className="kind"
+                className="circles"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaInstagram color="#c5ab6b" size="1.5rem" />
+                <FaInstagram color="#ffffff" size="1.2rem" />
               </a>
             </SocialIcon>
           </SocialIcons>
@@ -431,26 +469,29 @@ const About = () => {
           <ChefNamess>Diana Bright</ChefNamess>
           <ChefTitless>Dessert Chef</ChefTitless>
           <p className="pc">
-            Curabitur eget ultricies elit. Mauris feugiat magna a facilisis
-            malesuada. Duis tincidunt egestas placerat.
+            Ut consectetur enim ac nunc facilisis, vitae ullamcorper orci
+            ullamcorper. In hac habitasse platea dictumst. Praesent porttitor
+            ornare dolor nec fermentum.
           </p>
           <SocialIcons>
             <SocialIcon>
               <a
                 href="https://www.facebook.com"
                 target="_blank"
+                className="circles"
                 rel="noopener noreferrer"
               >
-                <FaFacebookF color="#c5ab6b" size="1.5rem" />
+                <FaFacebookF color="#ffffff" size="1.2rem" />
               </a>
             </SocialIcon>
             <SocialIcon>
               <a
                 href="https://www.twitter.com"
                 target="_blank"
+                className="circles"
                 rel="noopener noreferrer"
               >
-                <FaTwitter color="#c5ab6b" size="1.5rem" />
+                <FaTwitter color="#ffffff" size="1.2rem" />
               </a>
             </SocialIcon>
           </SocialIcons>
@@ -460,35 +501,39 @@ const About = () => {
           <ChefNamess>Donald White</ChefNamess>
           <ChefTitless>Dessert Chef</ChefTitless>
           <p className="pc">
-            Curabitur eget ultricies elit. Mauris feugiat magna a facilisis
-            malesuada. Duis tincidunt egestas placerat.
+            Fusce dapibus, libero at porta gravida, ante urna posuere ligula, eu
+            consectetur ipsum quam non risus. Vivamus facilisis gravida sem vel
+            dictum.
           </p>
           <SocialIcons>
             <SocialIcon>
               <a
                 href="https://www.facebook.com"
                 target="_blank"
+                className="circles"
                 rel="noopener noreferrer"
               >
-                <FaFacebookF color="#c5ab6b" size="1.5rem" />
+                <FaFacebookF color="#ffffff" size="1.2rem" />
               </a>
             </SocialIcon>
             <SocialIcon>
               <a
                 href="https://www.twitter.com"
                 target="_blank"
+                className="circles"
                 rel="noopener noreferrer"
               >
-                <FaTwitter color="#c5ab6b" size="1.5rem" />
+                <FaTwitter color="#ffffff" size="1.2rem" />
               </a>
             </SocialIcon>
             <SocialIcon>
               <a
                 href="https://www.pinterest.com"
                 target="_blank"
+                className="circles"
                 rel="noopener noreferrer"
               >
-                <FaPinterestP color="#c5ab6b" size="1.5rem" />
+                <FaPinterestP color="#ffffff" size="1.2rem" />
               </a>
             </SocialIcon>
           </SocialIcons>

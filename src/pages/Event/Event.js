@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Event.css"; // CSS file import
+import "./Event.css";
 import styled from "styled-components";
-import Footer from "./Footer"; // './Footer' kyunki dono files ek hi folder mein hain
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 const EventSections = styled.div`
@@ -232,7 +232,8 @@ const HistoryTextm = styled.p`
 `;
 
 const ReservationSection = styled.div`
-  background-image: url("img/res.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/res.jpg") center/cover no-repeat;
   background-size: cover;
 
   background-repeat: no-repeat;
@@ -252,27 +253,47 @@ const ReservationSection = styled.div`
 const FormContainer = styled.div`
   background: white;
   padding: 40px;
-  border-radius: 8px;
+  border-radius: 0px;
   text-align: left;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   color: #878787;
-  max-width: 500px;
+  max-width: 550px;
   width: 100%;
+  height: 100vh;
 `;
 
 const FormTitle = styled.h2`
   text-align: center;
-  font-size: 24px;
-  color: #303030;
   margin-bottom: 20px;
+  font-size: 35px;
+  line-height: 40px;
+  font-family: "Poppins";
+  font-weight: normal;
+  color: #303030;
+  margin-top: -5px;
 `;
-
+const Separators = styled.div`
+  height: 1px;
+  background: #c5ab6b;
+  width: 90px;
+  margin: 6px auto;
+  margin-top: 20px;
+`;
+const Separatorss = styled.div`
+  height: 1px;
+  background: #c5ab6b;
+  width: 120px;
+  margin: 5px auto;
+  margin-top: -3px;
+  // margin-bottom: 80px;
+`;
 const Input = styled.input`
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #878787;
   border-radius: 5px;
+  color: #878787;
 `;
 
 const Select = styled.select`
@@ -281,6 +302,7 @@ const Select = styled.select`
   margin: 10px 0;
   border: 1px solid #;
   border-radius: 5px;
+  color: #878787;
 `;
 
 const SubmitButton = styled.button`
@@ -301,22 +323,7 @@ const SubmitButton = styled.button`
     background-color: #c5ab4b;
     color: #ffffff;
 `;
-// const RestoSevenSection = styled.div`
-//   background: #131313;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   position: relative;
-//   display: flex;
-//   margin: 0px -30px -60px;
-//   padding: 80px 85.09px 50px 86px;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 4rem 10%;
-//   min-height: 60vh;
-//   width: 100%;
-// `;
-// const LogoImageContainer = styled.div``;
-// const LogoImage = styled.div``;
+
 const Event = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -423,6 +430,8 @@ const Event = () => {
       <ReservationSection>
         <FormContainer>
           <FormTitle>RESERVE A TABLE</FormTitle>
+          <Separators />
+          <Separatorss />
           <form>
             <label>Your Name</label>
             <Input type="text" placeholder="Enter your name" required />
@@ -481,11 +490,7 @@ const Event = () => {
           </form>
         </FormContainer>
       </ReservationSection>
-      {/* <RestoSevenSection>
-        <LogoImageContainer>
-          <LogoImage src="img/logo1.webp" alt="" />
-        </LogoImageContainer>
-      </RestoSevenSection> */}
+
       <Footer />
     </EventContainer>
   );

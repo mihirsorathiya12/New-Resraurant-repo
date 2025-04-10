@@ -125,7 +125,7 @@ const EventsContainer = styled.div`
   text-align: center;
   padding: 60px 20px;
   color: white;
-  width: 100vw;
+  width: 99.2vw;
   height: 120vh;
   align-items: center;
   justify-content: center;
