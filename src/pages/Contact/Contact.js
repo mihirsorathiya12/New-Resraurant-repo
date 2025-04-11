@@ -1,19 +1,24 @@
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import "./Contact.css";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  FaMapMarkerAlt,
+  FaHome,
   FaPhoneAlt,
   FaEnvelope,
   FaClock,
-  FaParking,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
 
-const EventSection = styled.div`
+const ContactWrapper = styled.div`
+  font-family: "Arial", sans-serif;
+  // display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
+const HeroSection = styled.div`
   height: 400px;
   width: 100%;
   display: flex;
@@ -27,13 +32,6 @@ const EventSection = styled.div`
   top: 0;
   content: "";
 `;
-
-const EventContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-`;
 const Overbay = styled.div`
   position: absolute;
   top: 0;
@@ -46,177 +44,304 @@ const EventContant = styled.div`
   position: relative;
   z-index: 2;
 `;
-const EventTitle = styled.h1`
+const HeroTitle = styled.h1`
   font: 50px Poppnis, Helvetica, Arial, Verdana;
   color: #ffffff;
   max-width: 100%;
 `;
-const Breadcrumd = styled.p`
+
+const Breadcrumb = styled.p`
+  margin-top: 10px;
+
   font: 13px "Open Sans", Helvetica, Arial, Vardana;
   color: #ffffff;
 `;
-const Section = styled.div`
-  padding: 50px 0;
-  // background: #f8f8f8;
+
+const InfoSection = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #fff;
+`;
+
+const InfoBox = styled.div`
+  flex: 1 1 220px;
+  max-width: 350px;
+`;
+
+const InfoTitle = styled.h4`
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  svg {
+    margin-right: 10px;
+    color: #c7a86e;
+  }
+`;
+
+const InfoTitles = styled.h4`
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  svg {
+    margin-right: 10px;
+    color: #c7a86e;
+  }
+`;
+
+const InfoTitled = styled.h4`
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+  margin-top: -20px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  svg {
+    margin-right: 10px;
+    color: #c7a86e;
+  }
+`;
+
+const InfoText = styled.p`
+  color: #878787;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+  margin-left: 25px;
+`;
+
+const OpeningList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  margin-left: 25px;
+  li {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #878787;
+  }
+`;
+
+const Section = styled.section`
+  padding: 60px 20px;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1030px;
+  width: 100%;
+
+  gap: 30px;
+  justify-content: center;
+`;
+
+const Box = styled.div`
+  background: #fff;
+  border-radius: 0px;
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  flex: 1 1 500px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 25px;
+  }
 `;
 
 const Title = styled.h2`
+  font-size: 35px;
+  line-height: 40px;
+  font-family: "Poppins";
+  font-weight: normal;
+  color: #303030;
+  margin-top: -5px;
   text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  position: relative;
+
+  &::after {
+    content: "*";
+    display: block;
+    font-size: 22px;
+    color: #c7a86e;
+    margin-top: 8px;
+  }
 `;
 
-const MapContainer = styled.div`
-  width: 100%;
-  height: 400px;
-  border-radius: 10px;
+const MapWrapper = styled.div`
+  height: 300px;
+  border-radius: 0px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  iframe {
+    width: 100%;
+    height: 98%;
+    border: none;
+  }
 `;
 
-const ContactForm = styled.div`
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+const Text = styled.p`
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: -5px;
 `;
-const ContactSection = () => {
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Input = styled.input`
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #878787;
+  border-radius: 0px;
+`;
+
+const TextArea = styled.textarea`
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #878787;
+  border-radius: 5px;
+  min-height: 120px;
+`;
+
+const Button = styled.button`
+  background-color: #c7a86e;
+  color: #fff;
+  padding: 8px 25px;
+  font-weight: bold;
+  margin-left: -280px;
+  margin-top: 10px;
+  font-size: 14px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #b5965e;
+  }
+`;
+
+const ContactPage = () => {
   return (
-    <EventContainer>
-      <EventSection className="eventback">
+    <ContactWrapper>
+      <HeroSection className="eventback">
         <Overbay />
         <EventContant>
-          <EventTitle>Contact</EventTitle>
-          <Breadcrumd>
+          <HeroTitle>Contact</HeroTitle>
+          <Breadcrumb>
             <Link to="/" className="homi">
               Home
             </Link>
             &nbsp;/&nbsp; Contact
-          </Breadcrumd>
+          </Breadcrumb>
         </EventContant>
-      </EventSection>
-      <Container className="main">
-        <Row className="ro0">
-          <Col>
-            <FaMapMarkerAlt size={17} className="text-warning" />
-            <span className="data"> Address</span>
-            <p className="p1">
-              121 Rock Street, 21 Avenue, New York, NY 92103-9000
-            </p>
-          </Col>
-          <Col>
-            <FaPhoneAlt size={17} className="text-warning" />
-            <span className="data">Phone</span>
-            <p className="p1">
-              1 (234) 567-891
-              <br />1 (234) 987-654
-            </p>
-          </Col>
+      </HeroSection>
 
-          <Col className="text-center">
-            <FaClock size={17} className="text-warning" />
-            <span className="data"> Opening Hours</span>
-            <p className="p1">
-              Monday........... 8 am - 10 pm
-              <br />
-              Tuesday.......... 8 am - 10 pm
-              <br />
-              Wednesday........ 8 am - 10 pm
-              <br />
-              Thursday......... 8 am - 10 pm
-              <br />
-              Friday........... 8 am - 11 pm
-              <br />
-              Saturday......... 8 am - 11 pm
-              <br />
-              Sunday........... 8 am - 10 pm
-            </p>
-          </Col>
-        </Row>
+      <InfoSection>
+        <InfoBox>
+          <InfoTitle>
+            <FaHome /> Address
+          </InfoTitle>
+          <InfoText>
+            121 Rock Street, 21 Avenue,
+            <br />
+            New York, NY 92103-9000
+          </InfoText>
+          <InfoTitles>
+            <FaMapMarkerAlt /> Parking
+          </InfoTitles>
+          <InfoText>Free Parking Lot on 125 Rock Street</InfoText>
+        </InfoBox>
 
-        <Row className="ro1">
-          <Col>
-            <FaEnvelope size={17} className="text-warning" />
-            <span className="data"> Email</span>
-            <p className="p1">hello@restaurantdemo.com</p>
-          </Col>
-          <Col className="col5">
-            <FaParking size={17} className="text-warning" />
-            <span className="data"> Parking</span>
-            <p className="p1">Free Parking Lot on 125 Rock Street</p>
-          </Col>
-        </Row>
-      </Container>
+        <InfoBox>
+          <InfoTitle>
+            <FaPhoneAlt /> Phone
+          </InfoTitle>
+          <InfoText>
+            1 (234) 567-891
+            <br />1 (234) 987-654
+          </InfoText>
+          <InfoTitles>
+            <FaEnvelope /> Email
+          </InfoTitles>
+          <InfoText>hello@restaurantdemo.com</InfoText>
+        </InfoBox>
+
+        <InfoBox>
+          <InfoTitled>
+            <FaClock /> Opening Hours
+          </InfoTitled>
+          <OpeningList>
+            <li>Monday ............... 8 am – 10 pm</li>
+            <li>Tuesday ............... 8 am – 10 pm</li>
+            <li>Wednesday .......... 8 am – 10 pm</li>
+            <li>Thursday .............. 8 am – 10 pm</li>
+            <li>Friday ................... 8 am – 11 pm</li>
+            <li>Saturday ............... 8 am – 11 pm</li>
+            <li>Sunday ................ 8 am – 10 pm</li>
+          </OpeningList>
+        </InfoBox>
+      </InfoSection>
+
       <Section>
         <Container>
-          <Row>
-            {/* Directions Section */}
-            <Col md={6}>
-              <MapContainer>
-                <Title>Directions</Title>
-                <iframe
-                  title="Google Fonts"
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  style={{ border: 0 }}
-                  src="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Work+Sans:wght@400;600;700&display=swap"
-                  allowFullScreen
-                ></iframe>
+          {/* Directions Box */}
+          <Box>
+            <Title>DIRECTIONS</Title>
+            <MapWrapper>
+              <iframe
+                title="Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.593472173917!2d72.67508781496833!3d23.075376484927287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8702e3b4f82b%3A0x49a73fcd441c08e3!2sNana%20Chiloda%2C%20Ahmedabad%2C%20Gujarat%20382430!5e0!3m2!1sen!2sin!4v1649160048890!5m2!1sen!2sin"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </MapWrapper>
+            <Text>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </Text>
+          </Box>
 
-                <br></br>
-              </MapContainer>
-              <p
-                style={{
-                  textAlign: "center",
-                  marginTop: "15px",
-                  color: "#666",
-                }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </Col>
-
-            {/* Contact Form Section */}
-            <Col md={6}>
-              <ContactForm>
-                <Title>Get in Touch!</Title>
-                <Form>
-                  <Form.Group controlId="name">
-                    <Form.Control type="text" placeholder="Name *" required />
-                  </Form.Group>
-
-                  <Form.Group controlId="email" className="mt-3">
-                    <Form.Control
-                      type="email"
-                      placeholder="E-mail *"
-                      required
-                    />
-                  </Form.Group>
-
-                  <Form.Group controlId="phone" className="mt-3">
-                    <Form.Control type="text" placeholder="Telephone" />
-                  </Form.Group>
-
-                  <Form.Group controlId="message" className="mt-3">
-                    <Form.Control
-                      as="textarea"
-                      rows={3}
-                      placeholder="Message"
-                    />
-                  </Form.Group>
-
-                  <Button className="bookt">Send Message</Button>
-                </Form>
-              </ContactForm>
-            </Col>
-          </Row>
+          <Box>
+            <Title>GET IN TOUCH!</Title>
+            <Form>
+              <Input type="text" placeholder="Name *" required />
+              <Input type="email" placeholder="E-mail *" required />
+              <Input type="text" placeholder="Telephone" />
+              <TextArea placeholder="Message" />
+            </Form>
+            <Button type="submit">Send message</Button>
+          </Box>
         </Container>
       </Section>
       <Footer />
-    </EventContainer>
+    </ContactWrapper>
   );
 };
 
-export default ContactSection;
+export default ContactPage;

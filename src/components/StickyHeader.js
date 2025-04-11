@@ -88,7 +88,7 @@ const StickyHeader = () => {
         <StyledNavLink to="/about">ABOUT US</StyledNavLink>
         <StyledNavLink to="/menu">MENU</StyledNavLink>
         <StyledNavLink to="/event">EVENTS</StyledNavLink>
-        <StyledNavLink to="/news">NEWS</StyledNavLink>
+        {/* <StyledNavLink to="/news">NEWS</StyledNavLink> */}
         <StyledNavLink to="/contact">CONTACT</StyledNavLink>
       </NavLinks>
 

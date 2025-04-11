@@ -102,6 +102,9 @@ const Quote = styled.div`
   font-family: "Open Sans", Helvetica, Arial, Verdana, sans-serif;
   p {
     margin: 10px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #878787;
   }
   svg {
     color: #c5ab6b;
